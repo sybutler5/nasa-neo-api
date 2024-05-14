@@ -1,0 +1,19 @@
+# NASA NEO API
+
+## The Assignment
+
+Accept an HTTP request specifying a start date, end date and range (in km) to search for asteroids from NASA's NeoWS API. 
+Results will be filtered by given parameters.
+
+## Installing / Running Locally
+
+Install npm if not already installed. Can use nvm to accomplish this: https://github.com/nvm-sh/nvm (npm version 10+ (and node version 18+) recommended).
+
+Run `npm i` after cloning repository. 
+
+Run `npx ts-node src/app.ts` to host application on (`localhost:3000` by default)
+
+Using Postman (or similar) you can hit the `localhost:3000/api/getNeo` go get Near Earth Orbit names by the following paramters in the request Headers (example values given):
+- start_date: 1997-12-01
+- end_date: 2007-12-31
+- range: 5000000000
