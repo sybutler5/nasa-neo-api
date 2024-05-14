@@ -11,7 +11,6 @@ export const getNeoDataAndFilterNames = async (neoRequest: NeoRequest): Promise<
 }
 
 function filterAsteroids(neos: NearEarthObject[], neoRequest: NeoRequest): string[] {
-  console.log('total neos retrieved' , neos.length);
     return neos.filter(n => n.close_approach_data.some(c => {
         return neoRequest.startDate.getTime() < new Date(c.close_approach_date).getTime() &&
         neoRequest.endDate.getTime() > new Date(c.close_approach_date).getTime() &&
