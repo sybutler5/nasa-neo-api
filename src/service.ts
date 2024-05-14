@@ -20,7 +20,6 @@ export const getAllNeoData = async () => {
     // let done = false;
     // while(!done) {
     while(startPage < 100) {
-        console.log(startPage + ' - ' + (startPage + batchSize - 1))
         for (let i = startPage; i < startPage + batchSize; i++) {
             urls.push(new URL(`${NASA_BASE_URL}?page=${i}&size=20&api_key=${NASA_API_KEY}`)); 
         }
