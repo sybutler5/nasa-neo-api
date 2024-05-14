@@ -2,7 +2,6 @@ const axios = require('axios')
 const NASA_BASE_URL = 'https://api.nasa.gov/neo/rest/v1/neo/browse';
 const NASA_API_KEY = 'xKjFRvrVdyMUPvTjLEJOR9dWruJCy4AknwJGec9J';
 const url = new URL(`${NASA_BASE_URL}?api_key=${NASA_API_KEY}`); 
-let i = 0;
 
 export const getNeoData = async () => {
     return axios.get(url)
